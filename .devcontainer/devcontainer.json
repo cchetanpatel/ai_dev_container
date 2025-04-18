@@ -1,0 +1,18 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--gpus=all"],
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {}
+  },
+  "dockerComposeFile": "../docker-compose.yml",
+  "containerEnv": {
+    "TERM": "xterm-256color"
+  },
+  "forwardPorts": [8188, 8888],
+  "hostRequirements": {
+    "gpu": "optional"
+  },
+  "postCreateCommand": "bash .devcontainer/install-dependencies.sh"
+}
