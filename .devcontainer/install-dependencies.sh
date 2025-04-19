@@ -31,9 +31,14 @@ source /opt/miniconda/bin/activate
 conda create --name dev python=$PYTHON_VERSION
 conda activate dev
 
-# Cuda 118 is most stable if using WSL2
+# Install Pytorch Cuda 118 is most stable if using WSL2
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
+# Install jupyter
 pip3 install jupyterlab
-ln -s /workspaces/aidevcontainer/.devcontainer/jupyter_lab_config.py /home/vscode/.jupyter/jupyter_lab_config.py
+# mkdir $HOME/.jupyter
+# cp /workspaces/aidevcontainer/.devcontainer/jupyter_lab_config.py /home/vscode/.jupyter/jupyter_lab_config.py
 
+#Install pip libraries
+pip3 matplotlib
+pip3 pandas

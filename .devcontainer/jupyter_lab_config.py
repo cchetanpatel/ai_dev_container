@@ -1004,7 +1004,7 @@ c.ServerApp.ip = "0.0.0.0"
 
 ## DEPRECATED, use root_dir.
 #  Default: ''
-# c.ServerApp.notebook_dir = ''
+c.ServerApp.notebook_dir = "/workspaces/aidevcontainer/study/"
 
 ## Whether to open in a browser after starting.
 #                          The specific browser used is platform dependent and
